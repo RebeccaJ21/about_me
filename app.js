@@ -35,7 +35,7 @@ var color=prompt('Is my favorite color yellow?').toLowerCase();
 console.log('not-yellow',color);
   if(color==='yes'|| color==='y') {
   alert('Nope! Blue is my favorite color!');
-} else if(color==='no'||'n') {
+} else if(color==='no'||color==='n') {
   alert('Correct! My favorite color is blue!');
 } else {
   alert('It was a  yes or no! Take a guess!');
