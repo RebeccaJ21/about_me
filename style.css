@@ -1,0 +1,12 @@
+header {
+  text-align: left;
+  color:blue;
+  font-family:fantasy;
+}
+main{
+  text-align:left;
+  color:navy;
+  font-size: 22px
+  font-family:monospace;
+  background-color: grey;
+}
