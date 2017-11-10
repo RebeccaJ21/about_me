@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 var answersright=0;
 
 var allergy = prompt('Am I allergic to chocolate?').toLowerCase();
@@ -122,4 +123,8 @@ el.textContent='Did I spend too much time trying to think of a yes or no questio
 var el=document.getElementById('fourth');
 el.textContent='Is my favorite color yellow? Correct Answer: No, it is blue!';
 var el=document.getElementById('fifth');
+<<<<<<< HEAD
 el.textContent='Am I a fan of naps? Correct Answer: Yes/of course! I love naps!';
+=======
+el.textContent='Am I a fan of naps? Correct Answer:Yes/of course! I love naps!';
+>>>>>>> 99bf48e38eff88e5c18c32f52ddf551c8a0a3e00

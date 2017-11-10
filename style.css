@@ -1,3 +1,4 @@
+
 body {
   background-image: url(https://cdn.pixabay.com/photo/2015/10/31/00/43/background-texture-1014963_1280.jpg);
   /*Image from pixaby*/
@@ -25,4 +26,5 @@ footer {
 
 ol{ list-style-position:inside;
     text-align: center;
+
 }
