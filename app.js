@@ -2,6 +2,9 @@
 
 var answersright=0;
 function question1() {
+
+  var el=document.getElementById('first');
+  el.textContent='Am I allergic to chocolate?';
   var allergy = prompt('Am I allergic to chocolate?').toLowerCase();
   console.log('fake-allergy', allergy);
 
@@ -15,34 +18,45 @@ function question1() {
   else {
     alert('Did you even try?');
   }
+  el.textContent+=' The correct answer is: No';
 }
 question1();
 
 function question2() {
+
+  var el=document.getElementById('second');
+  el.textContent='Do I have siblings?';
+
   var siblings = prompt('Do I have any siblings?').toLowerCase();
   console.log('real-siblings', siblings);
 
-  if ((allergy === 'no' || allergy === 'n') && (siblings === 'yes' || siblings === 'y')) {
+  if ((answersright === 1) && (siblings === 'yes' || siblings === 'y')) {
     alert('You know me very well!');
     answersright+=1;
   }
-  else if ((allergy === 'no' || allergy === 'n') && (siblings === 'no' || siblings === 'n')) {
+  else if ((answersright === 1) && (siblings === 'no' || siblings === 'n')) {
     alert('Well, at least you got the first one right!');
   }
-  else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'yes' || siblings === 'y')) {
+  else if ((answersright === 0) && (siblings === 'yes' || siblings === 'y')) {
     alert('You got this one right!');
     answersright+=1;
   }
-  else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'no' || siblings === 'n')) {
+  else if ((answersright === 0) && (siblings === 'no' || siblings === 'n')) {
     alert('Wrong Again!');
   }
   else {
     alert('Take a real guess next time!');
   }
+
+  el.textContent+=' The correct answer is: Yes';
 }
 question2();
 
 function question3() {
+
+  var el=document.getElementById('third');
+  el.textContent='Did I spend too much time trying to think of a yes or no question?';
+
   var question = prompt('Did I spend too much time trying to think of a yes or no question?').toLowerCase();
   console.log('over-thinking-question', question);
 
@@ -53,10 +67,15 @@ function question3() {
   else {
     alert('Trust me, I really did.');
   }
+  el.textContent+= 'The correct answer is: You know it!';
 }
 question3();
 
 function question4() {
+
+  var el=document.getElementById('fourth');
+  el.textContent='Is my favorite color yellow? Correct Answer: No, it is blue!';
+
   var color = prompt('Is my favorite color yellow?').toLowerCase();
   console.log('not-yellow', color);
 
@@ -70,10 +89,16 @@ function question4() {
   else {
     alert('It was a yes or no! Take a guess!');
   }
+
+  el.textContent+=' The correct answer is: No, it is blue!';
 }
 question4();
 
 function question5() {
+
+  var el=document.getElementById('fifth');
+  el.textContent='Am I a fan of naps?';
+
   var naps = prompt('Am I a fan of naps?').toLowerCase();
   console.log('naps-are-best', naps);
 
@@ -84,10 +109,16 @@ function question5() {
   else if (naps === 'no' || naps === 'n') {
     alert('What? Naps are the best.');
   }
+
+  el.textContent+=' The correct answer is: Yes/You Know It!';
 }
 question5();
 
 function question6() {
+
+  var el=document.getElementById('sixth');
+  el.textContent='How many years have I worked at my current job?';
+
   var job=prompt('How many years have I worked at my current job?').toLowerCase();
   var counter=0;
   while (counter<4 && job!=7) {
@@ -109,11 +140,17 @@ function question6() {
     answersright+=1;
   }
   console.log('jobtoolong',job);
+
+  el.textContent+=' The correct answer is 7.';
 }
 question6();
 
 function question7() {
-  var travel=prompt('Name one of my Top Three Countries I want to travel too.');
+
+  var el=document.getElementById('seventh');
+  el.textContent='Name one of my Top Three Countries I want to travel to.';
+
+  var travel=prompt('Name one of my Top Three Countries I want to travel to.').toLowerCase();
   var counter=0;
   while (counter<6 && travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
     console.log('top-three');
@@ -125,22 +162,12 @@ function question7() {
   if (travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
     alert('Good Try! My current top three countries are Ireland, Scotland, and Italy');
   } else {
-    alert('Correct! My top three countries are Ireland, Scotland, and Italy!');
+    alert('Correct! My top three countries are: Ireland, Scotland, and Italy!');
     answersright+=1;
     console.log('3-travel');
   }
+  el.textContent+=' The correct answers are: Ireland, Scotland, and Italy!';
 }
 question7();
 
 alert('You got '+ answersright +' Out of 7');
-
-var el=document.getElementById('first');
-el.textContent='Am I allergic to chocolate? Correct Answer: No';
-var el=document.getElementById('second');
-el.textContent='Do I have siblings? Correct Answer: Yes';
-var el=document.getElementById('third');
-el.textContent='Did I spend too much time trying to think of a yes or no question? Correct Answer: Yes/You Know It!';
-var el=document.getElementById('fourth');
-el.textContent='Is my favorite color yellow? Correct Answer: No, it is blue!';
-var el=document.getElementById('fifth');
-el.textContent='Am I a fan of naps? Correct Answer: Yes/of course! I love naps!';
