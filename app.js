@@ -53,7 +53,10 @@ function question3() {
   else {
     alert('Trust me, I really did.');
   }
+}
+question3();
 
+function question4() {
   var color = prompt('Is my favorite color yellow?').toLowerCase();
   console.log('not-yellow', color);
 
@@ -68,9 +71,9 @@ function question3() {
     alert('It was a yes or no! Take a guess!');
   }
 }
-question3();
+question4();
 
-function question4() {
+function question5() {
   var naps = prompt('Am I a fan of naps?').toLowerCase();
   console.log('naps-are-best', naps);
 
@@ -81,6 +84,10 @@ function question4() {
   else if (naps === 'no' || naps === 'n') {
     alert('What? Naps are the best.');
   }
+}
+question5();
+
+function question6() {
   var job=prompt('How many years have I worked at my current job?').toLowerCase();
   var counter=0;
   while (counter<4 && job!=7) {
@@ -102,24 +109,27 @@ function question4() {
       }
     console.log('jobtoolong',job);
   }
-question4();
+question6();
 
-var travel=prompt('Name one of my Top Three Countries I want to travel too.');
-var counter=0;
-while (counter<6 && travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
-  console.log('top-three');
-  console.log(travel);
-  travel= prompt('Not in my current top three! Guess Again!');
-  counter+=1;
- }
-  console.log('top-three-travel');
-  if (travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
-  alert('Good Try! My current top three countries are Ireland, Scotland, and Italy');
-} else {
-    alert('Correct! My top three countries are Ireland, Scotland, and Italy!');
+function question7() {
+  var travel=prompt('Name one of my Top Three Countries I want to travel too.');
+  var counter=0;
+  while (counter<6 && travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
+    console.log('top-three');
+    console.log(travel);
+    travel= prompt('Not in my current top three! Guess Again!');
+    counter+=1;
+  }
+    console.log('top-three-travel');
+    if (travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
+    alert('Good Try! My current top three countries are Ireland, Scotland, and Italy');
+  } else {
+      alert('Correct! My top three countries are Ireland, Scotland, and Italy!');
     answersright+=1;
+    console.log('3-travel');
+  }
 }
-  console.log('3-travel');
+question7();
 
   alert('You got '+ answersright +' Out of 7');
 
