@@ -7,7 +7,7 @@ function question1() {
 
   if (allergy === 'no' || allergy === 'n') {
     alert('You know me!');
-  answersright+=1;
+    answersright+=1;
   }
   else if (allergy === 'yes' || allergy === 'y') {
     alert('WRONG');
@@ -24,15 +24,15 @@ function question2() {
 
   if ((allergy === 'no' || allergy === 'n') && (siblings === 'yes' || siblings === 'y')) {
     alert('You know me very well!');
-  answersright+=1;
+    answersright+=1;
   }
   else if ((allergy === 'no' || allergy === 'n') && (siblings === 'no' || siblings === 'n')) {
     alert('Well, at least you got the first one right!');
   }
   else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'yes' || siblings === 'y')) {
     alert('You got this one right!');
-  answersright+=1;
-}
+    answersright+=1;
+  }
   else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'no' || siblings === 'n')) {
     alert('Wrong Again!');
   }
@@ -48,7 +48,7 @@ function question3() {
 
   if (question === 'yes' || question === 'y') {
     alert('You know it!');
-  answersright+=1;
+    answersright+=1;
   }
   else {
     alert('Trust me, I really did.');
@@ -62,7 +62,7 @@ function question4() {
 
   if (color === 'no' || color === 'n') {
     alert('Correct! My favorite color is blue!');
-  answersright+=1;
+    answersright+=1;
   }
   else if (color == 'yes' || color == 'y') {
     alert('Nope! Blue is my favorite color!');
@@ -91,24 +91,25 @@ function question6() {
   var job=prompt('How many years have I worked at my current job?').toLowerCase();
   var counter=0;
   while (counter<4 && job!=7) {
-  console.log('Guess-again!');
+    console.log('Guess-again!');
     if (job<7) {
-    job=prompt('That was too low, guess again! How many years have I worked at my current job?');
-  } else if (job>7) {
-    job=prompt('That was too high, guess again! How many years have I worked at my current job?');
-  } counter+=1;
-  }
-      if (job<7) {
-        alert('That was too low. The correct answer is 7.');
+      job=prompt('That was too low, guess again! How many years have I worked at my current job?');
     } else if (job>7) {
-        alert('That was too high. The correct answer is 7.');
+      job=prompt('That was too high, guess again! How many years have I worked at my current job?');
     }
-      else{
-        alert('7 is correct!')
-      answersright+=1;
-      }
-    console.log('jobtoolong',job);
+    counter+=1;
   }
+  if (job<7) {
+    alert('That was too low. The correct answer is 7.');
+  } else if (job>7) {
+    alert('That was too high. The correct answer is 7.');
+  }
+  else{
+    alert('7 is correct!')
+    answersright+=1;
+  }
+  console.log('jobtoolong',job);
+}
 question6();
 
 function question7() {
@@ -120,18 +121,18 @@ function question7() {
     travel= prompt('Not in my current top three! Guess Again!');
     counter+=1;
   }
-    console.log('top-three-travel');
-    if (travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
+  console.log('top-three-travel');
+  if (travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
     alert('Good Try! My current top three countries are Ireland, Scotland, and Italy');
   } else {
-      alert('Correct! My top three countries are Ireland, Scotland, and Italy!');
+    alert('Correct! My top three countries are Ireland, Scotland, and Italy!');
     answersright+=1;
     console.log('3-travel');
   }
 }
 question7();
 
-  alert('You got '+ answersright +' Out of 7');
+alert('You got '+ answersright +' Out of 7');
 
 var el=document.getElementById('first');
 el.textContent='Am I allergic to chocolate? Correct Answer: No';
@@ -142,8 +143,4 @@ el.textContent='Did I spend too much time trying to think of a yes or no questio
 var el=document.getElementById('fourth');
 el.textContent='Is my favorite color yellow? Correct Answer: No, it is blue!';
 var el=document.getElementById('fifth');
-<<<<<<< HEAD
 el.textContent='Am I a fan of naps? Correct Answer: Yes/of course! I love naps!';
-=======
-el.textContent='Am I a fan of naps? Correct Answer:Yes/of course! I love naps!';
->>>>>>> 99bf48e38eff88e5c18c32f52ddf551c8a0a3e00
