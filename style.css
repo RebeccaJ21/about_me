@@ -1,0 +1,25 @@
+body {
+  background-image: url(https://cdn.pixabay.com/photo/2015/10/31/00/43/background-texture-1014963_1280.jpg);
+  /*Image from pixaby*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: navy;
+  text-align: center;
+}
+
+header {
+  font-family:fantasy;
+  font-size: 34px;
+}
+
+main {
+  font-size: 22px;
+  font-family: monospace;
+
+}
+#questions li{ list-style-type: none;}
+footer {
+  font-size: 10px;
+  font-family: monospace;
+}
+ol{ list-style-position:inside;}
