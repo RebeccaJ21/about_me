@@ -1,68 +1,74 @@
 'use strict';
 
-<<<<<<< HEAD
 var answersright=0;
+function question1() {
+  var allergy = prompt('Am I allergic to chocolate?').toLowerCase();
+  console.log('fake-allergy', allergy);
 
-var allergy = prompt('Am I allergic to chocolate?').toLowerCase();
-console.log('fake-allergy', allergy);
+  if (allergy === 'no' || allergy === 'n') {
+    alert('You know me!');
+  answersright+=1;
+  }
+  else if (allergy === 'yes' || allergy === 'y') {
+    alert('WRONG');
+  }
+  else {
+    alert('Did you even try?');
+  }
+}
+question1();
 
-if (allergy === 'no' || allergy === 'n') {
-  alert('You know me!');
+function question2() {
+  var siblings = prompt('Do I have any siblings?').toLowerCase();
+  console.log('real-siblings', siblings);
+
+  if ((allergy === 'no' || allergy === 'n') && (siblings === 'yes' || siblings === 'y')) {
+    alert('You know me very well!');
+  answersright+=1;
+  }
+  else if ((allergy === 'no' || allergy === 'n') && (siblings === 'no' || siblings === 'n')) {
+    alert('Well, at least you got the first one right!');
+  }
+  else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'yes' || siblings === 'y')) {
+    alert('You got this one right!');
   answersright+=1;
 }
-else if (allergy === 'yes' || allergy === 'y') {
-  alert('WRONG');
+  else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'no' || siblings === 'n')) {
+    alert('Wrong Again!');
+  }
+  else {
+    alert('Take a real guess next time!');
+  }
 }
-else {
-  alert('Did you even try?');
-}
+question2();
 
-var siblings = prompt('Do I have any siblings?').toLowerCase();
-console.log('real-siblings', siblings);
+function question3() {
+  var question = prompt('Did I spend too much time trying to think of a yes or no question?').toLowerCase();
+  console.log('over-thinking-question', question);
 
-if ((allergy === 'no' || allergy === 'n') && (siblings === 'yes' || siblings === 'y')) {
-  alert('You know me very well!');
+  if (question === 'yes' || question === 'y') {
+    alert('You know it!');
   answersright+=1;
-}
-else if ((allergy === 'no' || allergy === 'n') && (siblings === 'no' || siblings === 'n')) {
-  alert('Well, at least you got the first one right!');
-}
-else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'yes' || siblings === 'y')) {
-  alert('You got this one right!');
+  }
+  else {
+    alert('Trust me, I really did.');
+  }
+
+  var color = prompt('Is my favorite color yellow?').toLowerCase();
+  console.log('not-yellow', color);
+
+  if (color === 'no' || color === 'n') {
+    alert('Correct! My favorite color is blue!');
   answersright+=1;
+  }
+  else if (color == 'yes' || color == 'y') {
+    alert('Nope! Blue is my favorite color!');
+  }
+  else {
+    alert('It was a yes or no! Take a guess!');
+  }
 }
-else if ((allergy === 'yes' || allergy === 'y') && (siblings === 'no' || siblings === 'n')) {
-  alert('Wrong Again!');
-}
-else {
-  alert('Take a real guess next time!');
-}
-
-
-var question = prompt('Did I spend too much time trying to think of a yes or no question?').toLowerCase();
-console.log('over-thinking-question', question);
-
-if (question === 'yes' || question === 'y') {
-  alert('You know it!');
-  answersright+=1;
-}
-else {
-  alert('Trust me, I really did.');
-}
-
-var color = prompt('Is my favorite color yellow?').toLowerCase();
-console.log('not-yellow', color);
-
-if (color === 'no' || color === 'n') {
-  alert('Correct! My favorite color is blue!');
-  answersright+=1;
-}
-else if (color == 'yes' || color == 'y') {
-  alert('Nope! Blue is my favorite color!');
-}
-else {
-  alert('It was a yes or no! Take a guess!');
-}
+question3();
 
 var naps = prompt('Am I a fan of naps?').toLowerCase();
 console.log('naps-are-best', naps);
