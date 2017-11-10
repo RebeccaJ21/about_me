@@ -70,36 +70,39 @@ function question3() {
 }
 question3();
 
-var naps = prompt('Am I a fan of naps?').toLowerCase();
-console.log('naps-are-best', naps);
+function question4() {
+  var naps = prompt('Am I a fan of naps?').toLowerCase();
+  console.log('naps-are-best', naps);
 
-if (naps === 'yes' || naps === 'y') {
-  alert('Of course! I love naps!');
-  answersright+=1;
-}
-else if (naps === 'no' || naps === 'n') {
-  alert('What? Naps are the best.');
-}
-var job=prompt('How many years have I worked at my current job?').toLowerCase();
-var counter=0;
-while (counter<4 && job!=7) {
-console.log('Guess-again!');
-  if (job<7) {
-  job=prompt('That was too low, guess again! How many years have I worked at my current job?');
-} else if (job>7) {
-  job=prompt('That was too high, guess again! How many years have I worked at my current job?');
-} counter+=1;
-}
-    if (job<7) {
-      alert('That was too low. The correct answer is 7.');
-  } else if (job>7) {
-      alert('That was too high. The correct answer is 7.');
+  if (naps === 'yes' || naps === 'y') {
+    alert('Of course! I love naps!');
+    answersright+=1;
   }
-    else{
-      alert('7 is correct!')
-      answersright+=1;
+  else if (naps === 'no' || naps === 'n') {
+    alert('What? Naps are the best.');
+  }
+  var job=prompt('How many years have I worked at my current job?').toLowerCase();
+  var counter=0;
+  while (counter<4 && job!=7) {
+  console.log('Guess-again!');
+    if (job<7) {
+    job=prompt('That was too low, guess again! How many years have I worked at my current job?');
+  } else if (job>7) {
+    job=prompt('That was too high, guess again! How many years have I worked at my current job?');
+  } counter+=1;
+  }
+      if (job<7) {
+        alert('That was too low. The correct answer is 7.');
+    } else if (job>7) {
+        alert('That was too high. The correct answer is 7.');
     }
-console.log('jobtoolong',job);
+      else{
+        alert('7 is correct!')
+      answersright+=1;
+      }
+    console.log('jobtoolong',job);
+  }
+question4();
 
 var travel=prompt('Name one of my Top Three Countries I want to travel too.');
 var counter=0;
