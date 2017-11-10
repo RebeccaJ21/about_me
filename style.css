@@ -19,7 +19,10 @@ main {
 }
 #questions li{ list-style-type: none;}
 footer {
-  font-size: 10px;
+  font-size: 15px;
   font-family: monospace;
 }
-ol{ list-style-position:inside;}
+
+ol{ list-style-position:inside;
+    text-align: center;
+}
