@@ -1,7 +1,7 @@
 'use strict';
 
-var answersright=0;
-function question1() {
+var answersRight=0;
+function questionOne() {
 
   var el=document.getElementById('first');
   el.textContent='Am I allergic to chocolate?';
@@ -10,7 +10,7 @@ function question1() {
 
   if (allergy === 'no' || allergy === 'n') {
     alert('You know me!');
-    answersright+=1;
+    answersRight+=1;
   }
   else if (allergy === 'yes' || allergy === 'y') {
     alert('WRONG');
@@ -20,9 +20,9 @@ function question1() {
   }
   el.textContent+=' The correct answer is: No';
 }
-question1();
+questionOne();
 
-function question2() {
+function questionTwo() {
 
   var el=document.getElementById('second');
   el.textContent='Do I have siblings?';
@@ -30,18 +30,18 @@ function question2() {
   var siblings = prompt('Do I have any siblings?').toLowerCase();
   console.log('real-siblings', siblings);
 
-  if ((answersright === 1) && (siblings === 'yes' || siblings === 'y')) {
+  if ((answersRight === 1) && (siblings === 'yes' || siblings === 'y')) {
     alert('You know me very well!');
-    answersright+=1;
+    answersRight+=1;
   }
-  else if ((answersright === 1) && (siblings === 'no' || siblings === 'n')) {
+  else if ((answersRight === 1) && (siblings === 'no' || siblings === 'n')) {
     alert('Well, at least you got the first one right!');
   }
-  else if ((answersright === 0) && (siblings === 'yes' || siblings === 'y')) {
+  else if ((answersRight === 0) && (siblings === 'yes' || siblings === 'y')) {
     alert('You got this one right!');
-    answersright+=1;
+    answersRight+=1;
   }
-  else if ((answersright === 0) && (siblings === 'no' || siblings === 'n')) {
+  else if ((answersRight === 0) && (siblings === 'no' || siblings === 'n')) {
     alert('Wrong Again!');
   }
   else {
@@ -50,9 +50,9 @@ function question2() {
 
   el.textContent+=' The correct answer is: Yes';
 }
-question2();
+questionTwo();
 
-function question3() {
+function questionThree() {
 
   var el=document.getElementById('third');
   el.textContent='Did I spend too much time trying to think of a yes or no question?';
@@ -62,16 +62,16 @@ function question3() {
 
   if (question === 'yes' || question === 'y') {
     alert('You know it!');
-    answersright+=1;
+    answersRight+=1;
   }
   else {
     alert('Trust me, I really did.');
   }
   el.textContent+= 'The correct answer is: You know it!';
 }
-question3();
+questionThree();
 
-function question4() {
+function questionFour() {
 
   var el=document.getElementById('fourth');
   el.textContent='Is my favorite color yellow? Correct Answer: No, it is blue!';
@@ -81,7 +81,7 @@ function question4() {
 
   if (color === 'no' || color === 'n') {
     alert('Correct! My favorite color is blue!');
-    answersright+=1;
+    answersRight+=1;
   }
   else if (color == 'yes' || color == 'y') {
     alert('Nope! Blue is my favorite color!');
@@ -92,9 +92,9 @@ function question4() {
 
   el.textContent+=' The correct answer is: No, it is blue!';
 }
-question4();
+questionFour();
 
-function question5() {
+function questionFive() {
 
   var el=document.getElementById('fifth');
   el.textContent='Am I a fan of naps?';
@@ -104,7 +104,7 @@ function question5() {
 
   if (naps === 'yes' || naps === 'y') {
     alert('Of course! I love naps!');
-    answersright+=1;
+    answersRight+=1;
   }
   else if (naps === 'no' || naps === 'n') {
     alert('What? Naps are the best.');
@@ -112,9 +112,9 @@ function question5() {
 
   el.textContent+=' The correct answer is: Yes/You Know It!';
 }
-question5();
+questionFive();
 
-function question6() {
+function questionSix() {
 
   var el=document.getElementById('sixth');
   el.textContent='How many years have I worked at my current job?';
@@ -137,37 +137,37 @@ function question6() {
   }
   else{
     alert('7 is correct!')
-    answersright+=1;
+    answersRight+=1;
   }
   console.log('jobtoolong',job);
 
   el.textContent+=' The correct answer is 7.';
 }
-question6();
+questionSix();
 
-function question7() {
+function questionSeven() {
 
   var el=document.getElementById('seventh');
   el.textContent='Name one of my Top Three Countries I want to travel to.';
 
   var travel=prompt('Name one of my Top Three Countries I want to travel to.').toLowerCase();
   var counter=0;
-  while (counter<6 && travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
-    console.log('top-three');
+  while (counter<6 && travel!='ireland' && travel!='scotland' && travel!='italy') {
+    console.log('not correct');
     console.log(travel);
-    travel= prompt('Not in my current top three! Guess Again!');
+    travel= prompt('Not in my current top three! Guess Again!').toLowerCase();
     counter+=1;
   }
-  console.log('top-three-travel');
-  if (travel!='Ireland' && travel!='Scotland' && travel!='Italy') {
+  console.log('top-three-travel');/*for some reason it won't take the right answer the first time fix*/
+  if (travel!='ireland' && travel!='scotland' && travel!='italy') {
     alert('Good Try! My current top three countries are Ireland, Scotland, and Italy');
   } else {
     alert('Correct! My top three countries are: Ireland, Scotland, and Italy!');
-    answersright+=1;
-    console.log('3-travel');
+    answersRight+=1;
+    console.log('Three-travel');
   }
   el.textContent+=' The correct answers are: Ireland, Scotland, and Italy!';
 }
-question7();
+questionSeven();
 
-alert('You got '+ answersright +' Out of 7');
+alert('You got '+ answersRight +' Out of 7');
